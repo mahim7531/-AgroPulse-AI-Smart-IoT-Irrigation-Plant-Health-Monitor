@@ -2,7 +2,15 @@ AgroPulse AI — Reusable Dashboard & AI Krishi Report Prompt
 
 Copy and paste the prompt below whenever you want to recreate or expand this exact dashboard:
 
-Build a responsive, modern web dashboard for AgroPulse AI — Smart IoT Irrigation & Plant Health Monitor (ESP32_PLANT_01) with a clean light/dark mode toggle, agricultural emerald/teal/sky color palette, and interactive live simulation.
+Build a responsive, modern web dashboard for AgroPulse AI — Smart IoT Irrigation & Plant Health Monitor (ESP32_PLANT_01) with a clean light/dark mode toggle, agricultural emerald/teal/sky color palette, and interactive live simulation, plus user authentication (Login & Registration) and ESP32 Device Key security.
+
+0. Authentication & Access Control (Login, Registration & Device Security)
+
+Farmer / User Login & Registration Modal/Screen: Clean sign-in and registration views supporting Email / Phone + Password, farmer name, and assigned device ID (ESP32_PLANT_01), with show/hide password toggle, form validation, and quick Demo Farmer Login option for fast testing.
+
+Session / JWT & Protected Actions: Display the logged-in farmer's profile pill/badge in the header with a Logout button. Gate sensitive actions (such as toggling Manual Override / Relay Pump, changing moisture thresholds, or generating AI Krishi Reports) behind authenticated session state (Bearer token) while allowing clean error/toast feedback if unauthenticated.
+
+ESP32 Device Authentication (x-device-key): Include configuration/documentation notes for authenticating incoming POST /api/telemetry requests from ESP32_PLANT_01 using a secret device API key header (x-device-key) so unauthorized requests are rejected.
 
 1. Top Navigation Bar
 
@@ -10,7 +18,7 @@ Brand logo & title: AgroPulse AI (v2.4 IoT) with subtitle Smart IoT Irrigation &
 
 Live device badge for ESP32_PLANT_01 showing online status and Wi-Fi RSSI (-58 dBm).
 
-Controls for Live Sim: ON/PAUSED, manual Sync button, and Dark/Light Mode toggle.
+Controls for Live Sim: ON/PAUSED, manual Sync button, Dark/Light Mode toggle, and Farmer Account / Login / Logout status.
 
 2. Top 4 KPI Sensor Cards
 
