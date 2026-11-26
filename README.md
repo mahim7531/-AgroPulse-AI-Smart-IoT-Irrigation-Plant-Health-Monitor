@@ -1,0 +1,1 @@
+# -AgroPulse-AI-Smart-IoT-Irrigation-Plant-Health-Monitor
